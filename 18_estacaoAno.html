@@ -7,10 +7,43 @@
 
     //ENTRADA
 
+    const hemisferio = prompt("Informe em qual hemisfério você está? (N - Norte, S - Sul)").toUpperCase();
+    const mes = Number(prompt("Informe o número do mês atual (1 a 12): "));
+
+    let estacao = "";
 
     //PROCESSAMENTO
 
-    
+    if (hemisferio === 'N') {
+        if (mes >= 3 && mes <= 5) {
+            estacao = "Primavera";
+        } else if (mes >= 6 && mes <= 8) {
+            estacao = "Verão";
+        } else if (mes >= 9 && mes <= 11) {
+            estacao = "Outono";
+        } else if (mes === 12 || mes === 1 || mes === 2) {
+            estacao = "Inverno";
+        } else {
+            estacao = "Mês inválido.";
+        }
+    } else if (hemisferio === 'S') {
+        if (mes >= 3 && mes <= 5) {
+            estacao = "Outono";
+        } else if (mes >= 6 && mes <= 8) {
+            estacao = "Inverno";
+        } else if (mes >= 9 && mes <= 11) {
+            estacao = "Primavera";
+        } else if (mes === 12 || mes === 1 || mes === 2) {
+            estacao = "Verão";
+        } else {
+            estacao = "Mês inválido.";
+        }
+    } else {
+        estacao = "Hemisfério inválido.";
+    }
+
     //SAÍDA
+
+    alert(estacao);
 
 </script>

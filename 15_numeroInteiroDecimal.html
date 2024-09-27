@@ -7,10 +7,18 @@
 
     //ENTRADA
 
+    const numero = Number(prompt("Informe um número: "));
 
     //PROCESSAMENTO
 
-    
+    if (Number.isInteger(numero)) {
+        alert(`${numero} é um número inteiro.`);
+    } else {
+        alert(`${numero} é um número decimal.`);
+    }
+
+
+
     //SAÍDA
 
 </script>

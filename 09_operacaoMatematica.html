@@ -9,10 +9,42 @@
 
     //ENTRADA
 
+    const numero1 = Number(prompt("Informe o primeiro número: "));
+    const numero2 = Number(prompt("Informe o segundo número: "));
+    const operacao = prompt("Qual operação deseja realizar? (+, -, *, /)").trim();
+
+    let resultado;
 
     //PROCESSAMENTO
 
-    
+    if (operacao === '+') {
+        resultado = numero1 + numero2;
+    } else if (operacao === '-') {
+        resultado = numero1 - numero2;
+    } else if (operacao === '*') {
+        resultado = numero1 * numero2;
+    } else if (operacao === '/') {
+        if (numero2 !== 0) {
+            resultado = numero1 / numero2;
+        } else {
+            alert("Não é possível dividir por zero.");
+            resultado = null;
+        }
+    } else {
+        alert("Operação inválida.");
+        resultado = null;
+    }
+
     //SAÍDA
+
+    if (resultado !== null) {
+        let parOuImpar = (resultado % 2 === 0) ? "par" : "ímpar";
+        let positivoOuNegativo = (resultado > 0) ? "positivo" : (resultado < 0) ? "negativo" : "zero";
+        let inteiroOuDecimal = Number.isInteger(resultado) ? "inteiro" : "decimal";
+
+        alert(`Resultado: ${resultado}\nO número é ${parOuImpar}, ${positivoOuNegativo} e ${inteiroOuDecimal}.`);
+    }
+
+
 
 </script>

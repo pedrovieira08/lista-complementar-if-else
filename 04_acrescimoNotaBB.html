@@ -6,12 +6,20 @@
     */
 
     //ENTRADA
-    let nota
 
-    
+    const notaAntes = Number(prompt("Digite a nota do little brother antes da ajuda: "));
+    const notaDepois = Number(prompt("Digite a nota do little brother depois da ajuda: "));
+
     //PROCESSAMENTO
-    
-    
+
+    const diferenca = notaDepois - notaAntes;
+    let acrescimo = 0;
+
+    if (diferenca > 0) {
+        acrescimo = diferenca / 4;
+    }
+
     //SAÍDA
+    alert(`O acréscimo que o big brother receberá em sua nota será de: ${acrescimo.toFixed(2)}`);
 
 </script>

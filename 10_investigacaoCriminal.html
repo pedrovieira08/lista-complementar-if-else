@@ -11,41 +11,41 @@
     */
 
     //ENTRADA
-      let teleFone = prompt(`Telefonou para vítima? S-sim N-não`).toUpperCase().trim();
-      let localCrime = prompt(`Esteve no local do crime? S-sim N-não` ).toUpperCase().trim();
-      let moraPerto = prompt(`mora perto da vítima? S-sim N-não`).toUpperCase().trim();
-      let deviaVitima = prompt(`Devia para vítima? S-sim N-não`).toUpperCase().trim();
-      let trabalhouVitima = prompt(`Já trabalhou para a vítima? S-sim N-não`).toUpperCase().trim();
-      let contador = 0;
+
+    let teleFone = prompt(`Telefonou para vítima? S-sim N-não`).toUpperCase().trim();
+    let localCrime = prompt(`Esteve no local do crime? S-sim N-não`).toUpperCase().trim();
+    let moraPerto = prompt(`mora perto da vítima? S-sim N-não`).toUpperCase().trim();
+    let deviaVitima = prompt(`Devia para vítima? S-sim N-não`).toUpperCase().trim();
+    let trabalhouVitima = prompt(`Já trabalhou para a vítima? S-sim N-não`).toUpperCase().trim();
+    let contador = 0;
+
     //PROCESSAMENTO
+
     if (teleFone = "S") {
         contador = contador + 1;
     }
-    if (localCrime = "S"){
+    if (localCrime = "S") {
         contador = contador + 1;
     }
-    if (moraPerto = "S"){
+    if (moraPerto = "S") {
         contador = contador + 1;
     }
-    if (deviaVitima = "S"){
-        contador = contador +1;
+    if (deviaVitima = "S") {
+        contador = contador + 1;
     }
-    if (trabalhouVitima = "S"){
-        contador = contador +1;
-    } 
-    if (contador == 2 ){
+    if (trabalhouVitima = "S") {
+        contador = contador + 1;
+    }
+    if (contador == 2) {
         alert("suspeito")
     }
-    if (contador == 3 && 4){
+    if (contador == 3 && 4) {
         alert("cumplice")
     }
-    if (contador == 5){
+    if (contador == 5) {
         alert("cumplice")
     }
 
-
-
-    
     //SAÍDA
 
-</script> 
+</script>

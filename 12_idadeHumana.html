@@ -11,10 +11,27 @@
 
     //ENTRADA
 
-    
+    const idadeCao = Number(prompt("Informe a idade do seu cão em anos: "));
+    const porteCao = prompt("Informe o porte do seu cão (P - Pequeno, M - Médio, G - Grande): ").toUpperCase();
+    let idadeHumana;
+
     //PROCESSAMENTO
 
-    
+    if (porteCao === 'P') {
+        idadeHumana = idadeCao * 5;
+    } else if (porteCao === 'M') {
+        idadeHumana = idadeCao * 6;
+    } else if (porteCao === 'G') {
+        idadeHumana = idadeCao * 7;
+    } else {
+        alert("Porte de cão inválido.");
+    }
+
     //SAÍDA
+
+    if (idadeHumana !== undefined) {
+        alert(`A idade do seu cão em anos humanos é: ${idadeHumana} anos.`);
+    }
+
 
 </script>

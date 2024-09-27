@@ -15,10 +15,36 @@
 
     //ENTRADA
 
+    const precoAlcool = 6.10;
+    const precoGasolina = 6.50;
+    const litros = Number(prompt("Informe o número de litros vendidos: "));
+    const tipoCombustivel = prompt("Informe o tipo de combustível (A - Álcool, G - Gasolina): ").toUpperCase();
+
+    let valorTotal = 0;
 
     //PROCESSAMENTO
 
-    
+    if (tipoCombustivel === 'A') {
+        if (litros <= 20) {
+            valorTotal = litros * precoAlcool * 0.97;
+        } else {
+            valorTotal = litros * precoAlcool * 0.95;
+        }
+    } else if (tipoCombustivel === 'G') {
+        if (litros <= 20) {
+            valorTotal = litros * precoGasolina * 0.96;
+        } else {
+            valorTotal = litros * precoGasolina * 0.94;
+        }
+    } else {
+        alert("O Tipo de combustível é inválido.");
+    }
+
+
     //SAÍDA
+
+    if (valorTotal > 0) {
+        alert(`O valor a ser pago é R$ ${valorTotal.toFixed(2)}.`);
+    }
 
 </script>

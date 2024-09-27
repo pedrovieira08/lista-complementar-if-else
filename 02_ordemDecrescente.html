@@ -5,18 +5,44 @@
     */
 
     //ENTRADA
-    let primeiroNumero =Number (prompt(`informe o primeiro número`));
-    let segundoNumero = Number(prompt(`informe o segundo numero`));
-    let terceiroNumero = Number(prompt(`informe o terceiro numero`));
 
-    if (primeiroNumero > segundoNumero > terceiroNumero){
+    const num1 = Number(prompt("informe o primeiro número: "));
+    const num2 = Number(prompt("informe o segundo número: "));
+    const num3 = Number(prompt("informe o terceiro número: "));
 
-    }
-
-    
     //PROCESSAMENTO
-    
+    let maior, medio, menor;
 
+if (num1 >= num2 && num1 >= num3) {
+    maior = num1;
+    if (num2 >= num3) {
+        medio = num2;
+        menor = num3;
+    } else {
+        medio = num3;
+        menor = num2;
+    }
+} else if (num2 >= num1 && num2 >= num3) {
+    maior = num2;
+    if (num1 >= num3) {
+        medio = num1;
+        menor = num3;
+    } else {
+        medio = num3;
+        menor = num1;
+    }
+} else {
+    maior = num3;
+    if (num1 >= num2) {
+        medio = num1;
+        menor = num2;
+    } else {
+        medio = num2;
+        menor = num1;
+    }
+}
+    
     //SAÍDA
+    alert(`os números em ordem decrescente são: ${maior}, ${medio}, ${menor}`);
     
 </script>

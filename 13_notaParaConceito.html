@@ -13,10 +13,30 @@
 
     //ENTRADA
 
-    
+    const nota = Number(prompt("Informe a nota do aluno (0 a 10): "));
+
+    let conceito = "";
+
     //PROCESSAMENTO
 
-    
+    if (nota >= 9.0 && nota <= 10.0) {
+        conceito = 'A';
+    } else if (nota >= 8.0 && nota < 9.0) {
+        conceito = 'B';
+    } else if (nota >= 7.0 && nota < 8.0) {
+        conceito = 'C';
+    } else if (nota >= 6.0 && nota < 7.0) {
+        conceito = 'D';
+    } else if (nota >= 0 && nota < 6.0) {
+        conceito = 'E';
+    } else {
+        alert("Nota inválida. Digite uma nota entre 0 e 10.");
+    }
+
     //SAÍDA
+
+    if (conceito) {
+        alert(`O conceito para a nota ${nota} é: ${conceito}`);
+    }
 
 </script>

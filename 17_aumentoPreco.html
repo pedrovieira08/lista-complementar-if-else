@@ -11,10 +11,25 @@
 
     //ENTRADA
 
-    
+    const precoProduto = Number(prompt("Informe o preço do produto: "));
+    let novoPreco;
+
     //PROCESSAMENTO
 
-    
+    if (precoProduto <= 280) {
+        novoPreco = precoProduto * 1.20; // Aumento de 20%
+    } else if (precoProduto <= 700) {
+        novoPreco = precoProduto * 1.15; // Aumento de 15%
+    } else if (precoProduto <= 1500) {
+        novoPreco = precoProduto * 1.10; // Aumento de 10%
+    } else {
+        novoPreco = precoProduto * 1.05; // Aumento de 5%
+    }
+
+
     //SAÍDA
+
+    alert(`O novo preço do produto é: R$ ${novoPreco.toFixed(2)}`);
+
 
 </script>
