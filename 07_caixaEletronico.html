@@ -12,9 +12,10 @@
     const saque = Number(prompt("Informe o valor do saque (mínimo R$ 10 e máximo R$ 600): "));
 
     //PROCESSAMENTO
+    // se colocar +, -, * e / atras do = faram as respectivas ecuações
 
     if (saque < 10 || saque > 600) {
-        alert("Informe o valor de saque inválido. O valor deve estar entre R$ 10 e R$ 600.");
+        alert("O valor de saque inválido. O valor deve estar entre R$ 10 e R$ 600.");
     } else {
         let valorRestante = saque;
 
