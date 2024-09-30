@@ -13,16 +13,9 @@
 
     const peso = Number(prompt("Informe seu peso em kg: "));
     const altura = Number(prompt("Informe sua altura em metros: "));
-    const resultado = calcularIMC(peso, altura);
-
+    const imc = peso / (altura ** 2);
+    let classificacao = "";
     //PROCESSAMENTO
-    
-   //Para que serve o function?
-   //Uma user defined function (função definida pelo usuário) é uma rotina, normalmente escrita com a linguagem T-SQL, que executa uma ação (como um cálculo complexo) e retorna o resultado dessa ação como um valor.
-
-    function calcularIMC(peso, altura) {
-        const imc = peso / (altura ** 2);
-        let classificacao = "";
 
         if (imc <= 18.5) {
             classificacao = "Subpeso";
@@ -33,14 +26,10 @@
         } else {
             classificacao = "Obeso";
         }
-
-        //A declaração return finaliza a execução de uma função e especifica os valores que devem ser retonados para onde a função foi chamada
-
-        return { imc: imc.toFixed(2), classificacao };
-    }
-
+    
     //SAÍDA
 
-    alert(`Seu IMC é: ${resultado.imc}\nClassificação: ${resultado.classificacao}`);
+    alert(`Seu IMC é: ${imc.toFixed(2)}\nClassificação: ${classificacao}`);
+
 
 </script>

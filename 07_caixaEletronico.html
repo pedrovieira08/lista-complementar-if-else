@@ -17,29 +17,22 @@
     if (saque < 10 || saque > 600) {
         alert("O valor de saque inválido. O valor deve estar entre R$ 10 e R$ 600.");
     } else {
-        let valorRestante = saque;
+        let valorRestante;
 
         const notas100 = Math.floor(valorRestante / 100);
-        valorRestante -= notas100 * 100;
+        valorRestante = saque - (notas100 * 100);
         const notas50 = Math.floor(valorRestante / 50);
-        valorRestante -= notas50 * 50;
+        valorRestante = saque - (notas50 * 50);
         const notas10 = Math.floor(valorRestante / 10);
-        valorRestante -= notas10 * 10;
+        valorRestante = saque -(notas10 * 10);
         const notas5 = Math.floor(valorRestante / 5);
-        valorRestante -= notas5 * 5;
+        valorRestante = saque -(notas5 * 5);
 
         const notas1 = valorRestante;
 
-        let mensagem = `Para sacar R$ ${saque}, você receberá:\n`;
-        if (notas100 > 0) mensagem += `${notas100} nota(s) de R$ 100\n`;
-        if (notas50 > 0) mensagem += `${notas50} nota(s) de R$ 50\n`;
-        if (notas10 > 0) mensagem += `${notas10} nota(s) de R$ 10\n`;
-        if (notas5 > 0) mensagem += `${notas5} nota(s) de R$ 5\n`;
-        if (notas1 > 0) mensagem += `${notas1} nota(s) de R$ 1\n`;
-
         //SAÍDA
 
-        alert(mensagem);
+    alert(`Para sacar a quantia de ${saque} reais,${notas100} nota(s) de 100,${notas50} nota(s) de 50,${notas5} nota(s) de 5 e ${notas1} nota de 1;`);
     }
 
 </script>
